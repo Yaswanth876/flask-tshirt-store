@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+    <h1>Admin Dashboard</h1>
+
+    <h2>Products</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th><th>Name</th><th>Price</th><th>Description</th><th>Image</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>₹{{ product.price }}</td>
+            <td>{{ product.description }}</td>
+            <td><img src="{{ url_for('static', filename=product.image) }}" width="80"></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Orders</h2>
+    {% if orders %}
+    <table class="table table-bordered">
+        <tr>
+            <th>Order ID</th><th>Customer</th><th>Email</th><th>Address</th><th>Product</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.customer_name }}</td>
+            <td>{{ order.customer_email }}</td>
+            <td>{{ order.customer_address }}</td>
+            <td>{{ order.product_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>No orders yet.</p>
+    {% endif %}
+</body>
+</html>

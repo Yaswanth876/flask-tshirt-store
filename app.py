@@ -68,6 +68,12 @@ def thank_you(order_id):
     order = Order.query.get_or_404(order_id)
     return render_template("thank_you.html", order=order)
 
+@app.route('/admin')
+def admin_page():
+    products = Product.query.all()
+    orders = Order.query.all() if 'Order' in globals() else []
+    return render_template('admin.html', products=products, orders=orders)
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
