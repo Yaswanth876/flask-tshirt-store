@@ -7,6 +7,13 @@ This project is a learning/freelance-ready app (templates + server logic) and is
 
 ---
 
+### 📸 Screenshots
+
+![Add a screenshot](home.jpeg)
+
+---
+
+
 ## 🚀 Key Features
 - Product catalog and product detail pages  
 - Add to cart / view cart / remove items  
@@ -121,11 +128,6 @@ Add product images in static/ and optimize for CDN
 
 ---
 
-### 📸 Screenshots
-
-![Add a screenshot](home.png)
-
----
 
 ### 🤝 Contributing
 
