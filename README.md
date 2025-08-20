@@ -9,7 +9,7 @@ This project is a learning/freelance-ready app (templates + server logic) and is
 
 ### 📸 Screenshots
 
-![Add a screenshot](home.jpeg)
+![Add a screenshot](home.jpg)
 
 ---
 
